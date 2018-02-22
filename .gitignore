@@ -77,3 +77,4 @@ tags
 *.iml
 out
 gen
+.hidden
