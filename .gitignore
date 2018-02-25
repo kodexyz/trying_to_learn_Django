@@ -68,7 +68,6 @@ Session.vim
 .netrwhist
 *~
 tags
-*~
 .fuse_hidden*
 .directory
 .Trash-*
@@ -77,4 +76,4 @@ tags
 *.iml
 out
 gen
-.hidden
+*.hidden
