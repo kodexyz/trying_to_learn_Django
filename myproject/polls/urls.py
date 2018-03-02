@@ -6,13 +6,13 @@ app_name = 'polls'
 
 urlpatterns = [
     # ex: /polls/
-    url(r'^$', views.index, name='index'),
+    url(r'^$', views.IndexView.as_view(), name='index'),
     # ex: /polls/5/
     url(r'^(?P<question_id>[0-9]+)/$',
-        views.detail, name='detail'),
+        views.DetailsView_as_view(), name='detail'),
     # ex: /polls/5/results/
     url(r'^(?P<question_id>[0-9]+)/results/$',
-        views.results, name='results'),
+        views.ResultsView.as_view(), name='results'),
     # ex: /polls/5/votes
     url(r'^(?P<question_id>[0-9]+)/vote/$',
         views.vote, name='vote'),
