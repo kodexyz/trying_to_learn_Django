@@ -1,14 +1,14 @@
-from django.shortcuts import render, get_object_or_404
-from django.http import HttpResponse, HttpResponseRedirect
+from django.shortcuts import get_object_or_404, render
+from django.http import HttpResponseRedirect
 from django.urls import reverse
 from django.views import generic
 
-from .models import Question, Choice
+from .models import Choice, Question
 
 
 class IndexView(generic.ListView):
     template_name = 'polls/index.html'
-    context_object_name = 'lates_question_list'
+    context_object_name = 'latest_question_list'
 
     def get_queryset(self):
         """return the last five published questions."""
@@ -17,7 +17,7 @@ class IndexView(generic.ListView):
 
 class DetailView(generic.DetailView):
     model = Question
-    template_name = 'polls/details.html'
+    template_name = 'polls/detail.html'
 
 
 class ResultsView(generic.DetailView):
